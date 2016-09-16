@@ -132,6 +132,7 @@ html, body{
 /* text above twitch player */
 #streamInfo{
 	font-family: "Sans Serif", Serif;
+	padding-top: 5%;
 }
 
 /* container of twitch player, text above twitch player and gradient hr */
@@ -149,9 +150,6 @@ html, body{
 }
 
 @media (min-width: 1024px) {
-	#streamInfo {
-		padding-top: 10%;
-	}
 
 	#lineAboveStream {
 		margin: 4rem auto 4rem auto;
@@ -159,9 +157,6 @@ html, body{
 }
 
 @media (max-width: 1023px) {
-	#streamInfo {
-		padding-top: 5%;
-	}
 
 	#lineAboveStream {
 		margin: 2rem auto 2rem auto;
