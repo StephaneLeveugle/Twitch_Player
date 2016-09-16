@@ -1,9 +1,7 @@
 $(function(){
 
+  // initializes foundation components
   $(document).foundation();
-  
-  let streamColumnWidth = $(".streamColumn").width(),
-      streamColumnHeight = $(".streamColumn").height();
 
   // set player to 80% width 
   let playerOptions = {
@@ -23,12 +21,11 @@ $(function(){
     $(".accordion").css("min-height", initialViewport.height);
     // player height to 60%
     playerOptions.height = $(".streamColumn").height() * 0.6;
-    console.log(playerOptions.height);
   }
 
 
   let player = new Twitch.Player("playerContainer", playerOptions);
-  // pause it not to let it buffer endlessly
+  // pause it to prevent it from buffering endlessly
   player.pause();
   
   let channels = ["ESL_SC2", "ESL_CSGO", "ZeratoR", "Trick2g", "ESL_Overwatch", "OgamingSC2", "cretetion", "FreeCodeCamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin", "comster404"];
@@ -48,8 +45,6 @@ $(function(){
 
         // if the stream exists and is online
         if(response && response.stream && response.stream.channel) {
-
-          console.log(response);
 
           let html = '<li class="accordion-item" data-accordion-item>' +
                         '<a href="#" class="accordion-title">' +
@@ -133,8 +128,6 @@ $(function(){
   // standard syntax doesn't work on dynamically added elements
   $(document).on("click", ".watchBtn", function(e) {
 
-    console.log("lala");
-
     e.preventDefault();
 
     // get the channel the user wants to watch
@@ -147,9 +140,9 @@ $(function(){
       player.setChannel(channel);
       player.play();
       // change text above player
-      $("#currentStream").text("Currently watching " + channel);
+      $("#streamInfo").text("Currently watching " + channel);
 
-      // smooth scroll if mobile/tablet
+      // smooth scroll to twitch player if mobile/tablet
       if(getViewport().width < 1024) {
         $('html, body').animate({
           scrollTop: $("#playerContainer").offset().top
@@ -171,17 +164,17 @@ $(function(){
     if(viewport.width < 1024) {
       // remove 100% height of accordion
       $(".accordion").css("min-height", 0);
-      // set stream column height to remaining height 
-      // $(".streamColumn").height($(body).width() - $(".accordion").height() - 1);
+      // ajust twitch player's iframe height
       $("#playerContainer > iframe").attr("height", $(".streamColumn").height() * 0.8);
     } 
     // large screens
     else {
       $(".accordion").css("min-height", viewport.height);
-      // $(".streamColumn").height($(body).width() - 1);
+      // ajust twitch player's iframe height
       $("#playerContainer > iframe").attr("height", $(".streamColumn").height() * 0.6);
     }
 
+    // ajust twitch player's iframe width
     $("#playerContainer > iframe").attr("width", $(".streamColumn").width() * 0.8);
     
 

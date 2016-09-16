@@ -3,15 +3,22 @@ html, body{
 	min-height: 100%;
 }
 
+/* make sure it takes aaaaaaaaaall the space*/
 .content {
 	height: 100%;
 	min-height: 100%;
 }
 
+/* image next to the channel name*/
 .logo{
 	max-height: 50px;
 	max-width: 50px;
 	margin-right: 1rem;
+}
+
+/* make sure the tab columns is black no matter what */
+.tabsColumn {
+	background-color: #111;
 }
 
 /* remove has-tip default styling */
@@ -26,6 +33,7 @@ html, body{
 	margin: 1rem 0 1rem 0;
 }
 
+/* watch btn styling */
 .watchBtn {
 	margin: auto;
 	background-color: transparent;
@@ -40,6 +48,7 @@ html, body{
 	color: #FFF;
 }
 
+/* logo of offline channels */
 .torso {
 	display: inline-block;
 	padding-top: 5px;
@@ -53,6 +62,7 @@ html, body{
 	margin: 0;
 }
 
+/* each menu container, there are 3 menus : all, online, offline*/
 .accordion {
 	background-color: #111;
 	margin: 0;
@@ -81,8 +91,9 @@ html, body{
 	color: #FFF;
 }
 
+/* what's switching the accordions, i.e. all online offline */
 .tabs {
-	background-color: #000;
+	background-color: #000; 
 	border: none;
 }
 
@@ -118,25 +129,27 @@ html, body{
 	margin: 0 10% 0 10%;
 }
 
-#currentStream{
+/* text above twitch player */
+#streamInfo{
 	font-family: "Sans Serif", Serif;
 }
 
+/* container of twitch player, text above twitch player and gradient hr */
 .streamColumn{
 	margin: 0 auto 0 auto;
 	background-color: #CCC;
 	min-height: 500px;
 }
 
+/* simulated hr with gradient color */
 #lineAboveStream {
-	/*margin: 2rem auto 2rem auto;*/
 	width: 100px;
 	height: 2px;
 	background: linear-gradient(to right, #36B8E9, #000, #36B8E9);
 }
 
 @media (min-width: 1024px) {
-	#currentStream {
+	#streamInfo {
 		padding-top: 10%;
 	}
 
@@ -146,7 +159,7 @@ html, body{
 }
 
 @media (max-width: 1023px) {
-	#currentStream {
+	#streamInfo {
 		padding-top: 5%;
 	}
 
