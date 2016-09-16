@@ -106,7 +106,6 @@ $(function(){
 
       }, 
       error: function(err) {
-        console.log(err);
         let html = '<li class="accordion-item" data-accordion-item><a href="#" class="accordion-title">' 
           + err.responseJSON.message 
           + '</a><div class="accordion-content" data-tab-content>' + err.responseJSON.error + '</div></li>';
