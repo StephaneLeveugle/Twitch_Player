@@ -19,8 +19,8 @@ $(function(){
   // large screens
   else {
     $(".accordion").css("min-height", initialViewport.height);
-    // player height to 60%
-    playerOptions.height = $(".streamColumn").height() * 0.6;
+    // player height to 50%
+    playerOptions.height = $(".streamColumn").height() * 0.5;
   }
 
 
@@ -170,7 +170,7 @@ $(function(){
     else {
       $(".accordion").css("min-height", viewport.height);
       // ajust twitch player's iframe height
-      $("#playerContainer > iframe").attr("height", $(".streamColumn").height() * 0.6);
+      $("#playerContainer > iframe").attr("height", $(".streamColumn").height() * 0.5);
     }
 
     // ajust twitch player's iframe width

@@ -132,7 +132,7 @@ html, body{
 /* text above twitch player */
 #streamInfo{
 	font-family: "Sans Serif", Serif;
-	padding-top: 5%;
+	padding-top: 2em;
 }
 
 /* container of twitch player, text above twitch player and gradient hr */
@@ -143,7 +143,7 @@ html, body{
 }
 
 /* simulated hr with gradient color */
-#lineAboveStream {
+.gradientHr {
 	width: 100px;
 	height: 2px;
 	background: linear-gradient(to right, #36B8E9, #000, #36B8E9);
@@ -151,14 +151,14 @@ html, body{
 
 @media (min-width: 1024px) {
 
-	#lineAboveStream {
+	.gradientHr {
 		margin: 4rem auto 4rem auto;
 	}
 }
 
 @media (max-width: 1023px) {
 
-	#lineAboveStream {
+	.gradientHr {
 		margin: 2rem auto 2rem auto;
 	}
 }
