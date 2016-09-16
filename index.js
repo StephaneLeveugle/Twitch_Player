@@ -31,7 +31,7 @@ $(function(){
   // pause it not to let it buffer endlessly
   player.pause();
   
-  let channels = ["ESL_CSGO", "ZeratoR", "Trick2g", "ESL_Overwatch", "OgamingSC2", "cretetion", "FreeCodeCamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin", "comster404"];
+  let channels = ["ESL_SC2", "ESL_CSGO", "ZeratoR", "Trick2g", "ESL_Overwatch", "OgamingSC2", "cretetion", "FreeCodeCamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "brunofin", "comster404"];
   
 
   // iterate through the channels array
